@@ -19,6 +19,10 @@ const GlobalStyle = createGlobalStyle`
     background: #4b4b4b;
   }
 
+  #root{
+    position: relative;
+  }
+
   a{
     text-decoration: none;
   }
@@ -45,6 +49,15 @@ const GlobalStyle = createGlobalStyle`
     src: url(${require('./fonts/Rany 400.otf')});
     font-weight: 400;
    }
+
+   .swiper-pagination-bullet-active {
+      background: #FFEE2D;
+    }
+    .swiper {
+      padding: 35px 0;
+    }
+
+
 `
 
 ReactDOM.render(

@@ -7,7 +7,7 @@ type Props = {
     flex?: number;
     direction?: 'column' | 'row';
     flexWrap?: string;
-    width?: string | 'auto'
+    width?: string | '100%'
   };
   
   export const Flex = styled.div<Props>`

@@ -1,18 +1,21 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Flex } from "../../uikit/uikit";
 
 export const HeaderWrap = styled.header`
-    background: rgba(0, 0, 0, 0.01);
-    backdrop-filter: blur(400px);
+    background: rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(20px);
     position: fixed;
     width: 100%;
-    padding: 50px 0;
+    z-index: 2;
 `
 
 export const HeaderLogoWrap = styled(Link)`
     display: flex;
     align-items: center;
     margin-right: auto;
+    padding: 21px 0;
+
 ` 
 
 export const HeaderLogo = styled.img`
@@ -54,9 +57,21 @@ export const LangDropDown = styled.img`
     margin-left: 10px;
 ` 
 
-
 export const Burger = styled.img`
     width: 30px;
     margin-left: 24px;
 `
 
+
+export const LangWrap = styled(Flex)`
+    position: relative;
+    cursor: pointer;
+` 
+
+
+export const LangIcon = styled.img`
+    width: 30px;
+`
+
+
+// LDD - Languages Dropw Down
