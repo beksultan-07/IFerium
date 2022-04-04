@@ -3,26 +3,32 @@ import { Link } from 'react-router-dom'
 import { BigText, MiniText, PreTitle } from '../../../uikit/fonts'
 import { Container, Flex } from '../../../uikit/uikit'
 import { IFDIcon, IFDItem, IFDItemsWrap, IFDNum, IFDTextWrap, IFDViewMore } from './IFeruemDescSC'
+import {useTranslation} from "react-i18next";
+
 
 const IFeruemDesc:React.FC = () => {
   const Icon = require('../../../assets/arrowRight.svg')['default']
   
+  const {t} = useTranslation()
+
 
   return (
     <Container>
       <IFDTextWrap>
-        <BigText>What is IFEREUM</BigText>
-        <PreTitle margin='30px 0' color='#FFF' style={{fontWeight: '400'}}>IFEREUM is a next-generation network based on the Blockchain 4.0 technology for sharing digital assets and a platform for creating and managing decentralized apps and services in real-time</PreTitle>
-        <PreTitle>Four components of the system:</PreTitle>
+        <BigText>{t("Home.IFD.title")}</BigText>
+        <PreTitle margin='30px 0' color='#FFF' style={{fontWeight: '400'}}>
+          {t("Home.IFD.text")}
+        </PreTitle>
+        <PreTitle>{t("Home.IFD.pre-title")}</PreTitle>
       </IFDTextWrap>
 
       <IFDItemsWrap>
         <IFDItem>
           <Flex align='flex-start'>
             <IFDNum>1</IFDNum>
-            <PreTitle color='#FFF'>The fastest and most secure Blockchain</PreTitle>
+            <PreTitle color='#FFF'>{t("Home.IFD.Blocks.Block1.title")}</PreTitle>
           </Flex>
-          <MiniText margin='10px 0 20px'>More than five billion transactions per day, no more than three seconds to validate a transaction</MiniText>
+          <MiniText margin='10px 0 20px'>{t("Home.IFD.Blocks.Block1.text")}</MiniText>
           <IFDViewMore to='#'>
             <PreTitle>More</PreTitle>
             <IFDIcon src={Icon}/>
@@ -32,9 +38,9 @@ const IFeruemDesc:React.FC = () => {
         <IFDItem>
           <Flex align='flex-start'>
             <IFDNum>2</IFDNum>
-            <PreTitle color='#FFF'>New generation of Smart Contracts</PreTitle>
+            <PreTitle color='#FFF'>{t("Home.IFD.Blocks.Block2.title")}</PreTitle>
           </Flex>
-          <MiniText margin='10px 0 20px'>Decentralized real-time applications that are operated like regular web services and developed</MiniText>
+          <MiniText margin='10px 0 20px'>{t("Home.IFD.Blocks.Block2.text")}</MiniText>
           <IFDViewMore to='#'>
             <PreTitle>More</PreTitle>
             <IFDIcon src={Icon}/>
@@ -44,9 +50,9 @@ const IFeruemDesc:React.FC = () => {
         <IFDItem>
           <Flex align='flex-start'>
             <IFDNum>3</IFDNum>
-            <PreTitle color='#FFF'>Decentralized Internet</PreTitle>
+            <PreTitle color='#FFF'>{t("Home.IFD.Blocks.Block3.title")}</PreTitle>
           </Flex>
-          <MiniText margin='10px 0 20px'>Decentralized apps directory and a multi-asset wallet that won't overload your computer </MiniText>
+          <MiniText margin='10px 0 20px'>{t("Home.IFD.Blocks.Block3.text")}</MiniText>
           <IFDViewMore to='#'>
             <PreTitle>More</PreTitle>
             <IFDIcon src={Icon}/>
@@ -56,9 +62,9 @@ const IFeruemDesc:React.FC = () => {
         <IFDItem>
           <Flex align='flex-start'>
             <IFDNum>4</IFDNum>
-            <PreTitle color='#FFF'>IFEREUM network exchange asset</PreTitle>
+            <PreTitle color='#FFF'>{t("Home.IFD.Blocks.Block4.title")}</PreTitle>
           </Flex>
-          <MiniText margin='10px 0 20px'>IFEREUM is used to ensure the reliability of the network, exchange services</MiniText>
+          <MiniText margin='10px 0 20px'>{t("Home.IFD.Blocks.Block4.text")}</MiniText>
           <IFDViewMore to='#'>
             <PreTitle>More</PreTitle>
             <IFDIcon src={Icon}/>

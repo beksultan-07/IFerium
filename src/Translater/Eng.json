@@ -1,0 +1,115 @@
+{
+    "Footer": {
+        "Block1": {
+            "title": "Contacts",
+            "links": {
+                "link1": "Feedback at",
+                "link2": "Support at",
+                "link3": "Media enquiries"
+            }
+        },
+        "Block2": {
+            "title": "Quick links",
+            "links": {
+                "link1": "What is",
+                "link2": "White Paper",
+                "link3": "One-Pager",
+                "link4": "FAQ",
+                "link5": "For Exchanges"
+            }
+        },
+        "Block3": {
+            "title": "Support",
+            "links": {
+                "link1": "Terms of Services",
+                "link2": "Terms of Coin Sale",
+                "link3": "Anti-Spam Policy",
+                "link4": "Privacy Policy",
+                "link5": "Risk Agreement"
+            }
+        }
+    },
+    "Home": {
+        "Banner": {
+            "title": "The First DEX on BNB Chain with a three-type referal system",
+            "text": "Enjoy profitable yield farming and exchanging with the lowest fees in DeFi space",
+            "btn": "Trade Now",
+            "trades": {
+                "trade1": "The Lowest Trade Fee in the DeFi Space",
+                "trade2": "Exchange Fee Reimbursement",
+                "trade3": "Total Value Locked",
+                "trade4": "Total Value Locked"
+            }
+        },
+        "Benefits": {
+            "title": "Our Benefits", 
+            "First": {
+                "title": "3-type Referral System",
+                "text": "Invite your friends and earn a certain commission reward every time they make a swap on Ifereum and 5% from their income in Farms & Launchpools."
+            },
+            "Second": {
+                "title": "The Lowest Exchange Fee",
+                "text": "Safely buy and sell your cryptocurrency with the lowest exchange fee in the DeFi space."
+            },
+            "Third": {
+                "title": "Trade Fee Reimbursement",
+                "text": "Make a swap on Ifereum at no cost. Up to 90% of the trading fee returned in BSW tokens."
+            },
+            "Forth": {
+                "title": "Competitions",
+                "text": "Participate in the regular Ifereum trading competitions and win exclusive prizes."
+            }
+        },
+        "IFD":{
+            "title": "What is IFEREUM",
+            "text": "IFEREUM is a next-generation network based on the Blockchain 4.0 technology for sharing digital assets and a platform for creating and managing decentralized apps and services in real-time",
+            "pre-title": "Four components of the system:",
+            "Blocks": {
+                "Block1": {
+                    "title": "The fastest and most secure Blockchain",
+                    "text": "More than five billion transactions per day, no more than three seconds to validate a transaction"
+                },
+                "Block2": {
+                    "title": "New generation of Smart Contracts",
+                    "text": "Decentralized real-time applications that are operated like regular web services and developed"
+                },
+                "Block3": {
+                    "title": "Decentralized Internet",
+                    "text": "Decentralized apps directory and a multi-asset wallet that won't overload your computer"
+                },
+                "Block4": {
+                    "title": "IFEREUM network exchange asset",
+                    "text": "IFEREUM is used to ensure the reliability of the network, exchange services"
+                }
+            }
+        },
+        "RoadMap": {
+            "title": "Project Roadmap",
+            "Blocks": {
+                "Block1": {
+                    "texts": {
+                        "text1": "Public release of the project",
+                        "text2": "Public release of the project",
+                        "text3": "Registration in Switzerland",
+                        "text4": "Mainnet activation",
+                        "text5": "Forging tests"
+                    }
+                },
+                "Block2": {
+                    "texts": {
+                        "text1": "Forging in Mainnet",
+                        "text2": "Peer node",
+                        "text3": "Infrastructure Torrent node"
+                    }
+                },
+                "Block3": {
+                    "texts": {
+                        "text1": "Service Torrent node",
+                        "text2": "Verification node",
+                        "text3": "Update to browser"
+                    }
+                }
+            }
+        }        
+    }
+}

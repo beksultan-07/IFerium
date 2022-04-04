@@ -2,6 +2,8 @@ import React from 'react'
 import { BigText, MiniText, Text, BiggerText } from '../../../uikit/fonts'
 import { Container, Flex } from '../../../uikit/uikit'
 import { BannerBtn, BannerInfo, BannerLogo, BannerRates, BannerRatesItem, BannerRatesItem2, BannerRatesItemWrap, BannerRatesItem2Texts, BannerInfoSide } from './BannerSC'
+import {useTranslation} from "react-i18next";
+
 
 const Banner:React.FC = () => {
     const ArrowRightIcon = require('../../../assets/home/arrowRightBlack.svg')['default']
@@ -10,16 +12,18 @@ const Banner:React.FC = () => {
     const Icon2 = require('../../../assets/home/icon2.svg')['default']
     const Icon3 = require('../../../assets/home/icon3.svg')['default']
 
-
+    const {t} = useTranslation()
 
     return (
         <Container>
             <BannerInfo justify='space-between' align='flex-start' margin='85px 0 0'>
                 <BannerInfoSide direction='column' flex={1}>
-                    <BigText color='#F6F6F6' style={{maxWidth: '660px'}}>The First DEX on BNB Chain with a three-type referal system</BigText>
-                    <Text margin='20px 0'>Enjoy profitable yield farming and exchanging with the lowest fees in DeFi space</Text>
+                    <BigText color='#F6F6F6' style={{maxWidth: '660px'}}>
+                        {t("Home.Banner.title")}
+                    </BigText>
+                    <Text margin='20px 0'>{t("Home.Banner.text")}</Text>
                     <BannerBtn>
-                        <span>Trade Now</span>
+                        <span>{t("Home.Banner.btn")}</span>
                         <img src={ArrowRightIcon}/>
                     </BannerBtn>
                 </BannerInfoSide>
@@ -31,14 +35,14 @@ const Banner:React.FC = () => {
                     <BannerRatesItem>
                         <img src={Icon1}/>
                         <Flex direction='column'>
-                            <MiniText margin='0 0 10px 0'>The Lowest Trade Fee in <br/> the DeFi Space</MiniText>
+                            <MiniText margin='0 0 10px 0' style={{maxWidth: '210px'}}>{t("Home.Banner.trades.trade1")}</MiniText>
                             <BiggerText>0.1%</BiggerText>
                         </Flex>
                     </BannerRatesItem>
                     <BannerRatesItem>
                         <img src={Icon2}/>
                         <Flex direction='column'>
-                            <MiniText margin='0 0 10px 0'>Exchange Fee<br/> Reimbursement</MiniText>
+                            <MiniText margin='0 0 10px 0' style={{maxWidth: '210px'}}>{t("Home.Banner.trades.trade2")}</MiniText>
                             <BiggerText>up to 90%</BiggerText>
                         </Flex>
                     </BannerRatesItem>
@@ -46,11 +50,11 @@ const Banner:React.FC = () => {
                 <BannerRatesItem2>
                     <img src={Icon3}/>
                     <BannerRatesItem2Texts>
-                        <MiniText margin='0 0 10px 0'>Total Value Locked</MiniText>
+                        <MiniText margin='0 0 10px 0'>{t("Home.Banner.trades.trade3")}</MiniText>
                         <BiggerText color='#F6F6F6'>$625 347 594</BiggerText>
                     </BannerRatesItem2Texts>
                     <BannerRatesItem2Texts>
-                        <MiniText margin='0 0 10px 0'>Total Value Locked</MiniText>
+                        <MiniText margin='0 0 10px 0'>{t("Home.Banner.trades.trade4")}</MiniText>
                         <BiggerText color='#F6F6F6'>$625 347 594</BiggerText>
                     </BannerRatesItem2Texts>
                      

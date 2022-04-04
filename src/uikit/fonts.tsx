@@ -76,4 +76,12 @@ export const DateText = styled.p<Props>`
     margin: ${props => props.margin || '0px'};
 `
 
-
+export const TinyText = styled.p<Props>`
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    color: ${props => props.color || '#F7F7F7'};
+    margin: ${props => props.margin || '0px'};
+`

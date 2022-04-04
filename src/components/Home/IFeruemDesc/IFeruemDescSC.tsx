@@ -24,7 +24,7 @@ export const IFDItem = styled.li`
     display: flex;
     flex-direction: column;
     padding: 0 20px;
-    height: 235px;
+    height: 255px;
     border-right: solid 1px #FFEE2D; 
     :first-child{
         padding: 0 20px 0 0; 

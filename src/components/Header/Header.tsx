@@ -1,16 +1,42 @@
 import React from 'react'
 import { Container, Flex } from '../../uikit/uikit'
-import { HeaderLogo, HeaderLogoWrap, HeaderWrap, HeaderLogoText, HeaderLinks, HeaderLink, LangDropDown, Burger, LangIcon, LangWrap } from './HeaderSC'
+import AdaptiveBurgerMenu from './adaptiveBurgerMenu/AdaptiveBurgerMenu';
+import { HeaderLogo, HeaderLogoWrap, HeaderWrap, HeaderLogoText, HeaderLinks, HeaderLink, LangDropDown, LangIcon, LangWrap, RightMenu, Burger } from './HeaderSC'
 import LangDD from './langDropDown/LangDD';
 
 
+type Props = {
+    lang: string;
+    setLang: any;
+    showDD: boolean;
+    setShowDD: any;
+}
 
-const Header:React.FC = () => {
+const Header:React.FC<Props> = (props) => {
     const logo = require("../../assets/logo.svg")['default'];
     const DropDownIcon = require("../../assets/DropDown.svg")['default'];
-    const BurgerIcon = require("../../assets/burger.svg")['default'];
-    const LangIco = require("../../assets/langs/En.svg")['default']
+    
+    const LangIco1 = require("../../assets/langs/En.svg")['default']
+    const LangIco2 = require("../../assets/langs/ru.png")
+    
+    const BurgerIcon = require("../../assets/burger.svg")['default']
 
+    const [showBurgerMenu, setShowBurgerMenu] = React.useState(false)
+
+
+    function checkLang(){
+        if(props.lang === 'en'){
+            return LangIco1
+        }
+        if(props.lang === 'ru'){
+            return LangIco2
+        }
+    }
+
+    function langHandler(e: React.MouseEvent){
+        e.stopPropagation()
+        props.setShowDD(true)
+    }
 
     return (
         <HeaderWrap>
@@ -22,19 +48,32 @@ const Header:React.FC = () => {
                     </HeaderLogoWrap> 
     
                     <HeaderLinks>
-                        <HeaderLink to='/'>Roadmap</HeaderLink>
-                        <HeaderLink to='/'>Contact</HeaderLink>
+                        <HeaderLink 
+                            // onClick={roadMapSection.onClick}
+                        >Roadmap</HeaderLink>
+                        <HeaderLink
+                            // onClick={aboutUsSection.onClick}
+                        >Contact</HeaderLink>
                     </HeaderLinks>
     
-                    <Flex margin='0 0 0 auto'>
-                        <LangWrap align='center'>
-                            {/* <span style={{color: '#fff'}}>En</span> */}
-                            <LangIcon src={LangIco}/>
+                    <RightMenu margin='0 0 0 auto'>
+                        <LangWrap align='center' onClick={(e)=> langHandler(e)}>
+                            <LangIcon src={checkLang()} />
                             <LangDropDown src={DropDownIcon}/>
-                            {/* <LangDD/> */}
+                            <LangDD activeLang={props.lang} ddShow={props.showDD} setActiveLang={props.setLang}/>
                         </LangWrap>
-                        {/* <Burger src={BurgerIcon}/> */}
-                    </Flex>
+                    </RightMenu>
+
+
+                    <Burger src={BurgerIcon} onClick={() => setShowBurgerMenu(!showBurgerMenu)}/>
+                    <AdaptiveBurgerMenu 
+                        showBurgerMenu={showBurgerMenu}
+                        setBM={setShowBurgerMenu}
+                        lang={props.lang}
+                        setLang={props.setLang}
+                        setShowDD={props.setShowDD}
+                        showDD={props.showDD}
+                    />
                 </Flex>
             </Container>
         </HeaderWrap>

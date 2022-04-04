@@ -5,6 +5,7 @@ import Benefits from '../../components/Home/Benefits/Benefits'
 import IFeruemDesc from '../../components/Home/IFeruemDesc/IFeruemDesc'
 import NewsBlock from '../../components/Home/NewsBlock/NewsBlock'
 import RoadMap from '../../components/Home/RoadMap/RoadMap'
+import WalletConnect from '../../components/Home/WalletConnect/WalletConnect'
 
 
 const Bg = require("../../assets/home/bg.jpg")
@@ -20,7 +21,8 @@ const Home:React.FC = () => {
         <HomeStyle>
             <Banner/>
             <Benefits/>
-            <NewsBlock/>
+            <WalletConnect/>
+            {/* <NewsBlock/> */}
             <IFeruemDesc/>
             <RoadMap/>
         </HomeStyle>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { Flex } from '../../uikit/uikit'
+import { HeaderLogoText } from '../Header/HeaderSC'
 
 const bg = require('../../assets/FooterBG.jpg') 
 
@@ -39,4 +40,8 @@ export const FooterContent = styled(Flex)`
         grid-template-columns: repeat(1, 1fr);
         gap: 30px;
     }
+`
+
+export const FooterLogoText = styled(HeaderLogoText)`
+    display: block;
 `

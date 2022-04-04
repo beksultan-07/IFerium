@@ -6,16 +6,28 @@ import SideBar from './components/SideBar/SideBar';
 import Home from './pages/Home/Home'
 
 function App() {
+  const [lang, setLang] = React.useState('en')
+  const [showDD, setShowDD] = React.useState(false)
+
+  function headerClicks(){
+    setShowDD(false)
+  }
+
   return (
-    <>
-      <Header/>
+    <div onClick={() => headerClicks()}>
+      <Header 
+        lang={lang} 
+        setLang={setLang} 
+        setShowDD={setShowDD} 
+        showDD={showDD}
+      />
       <SideBar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="*" element={<div>error</div>}/>
       </Routes>
       <Footer/>
-    </>
+    </div>
   );
 }
 

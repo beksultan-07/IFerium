@@ -8,14 +8,21 @@ import { Autoplay} from "swiper";
 import { RMItem, RMLine, CheckedIconS } from './RoadMapSC';
 import 'swiper/css';
 
+import {useTranslation} from "react-i18next";
+
+
 const RoadMap:React.FC = () => {
     const CheckedIcon = require('../../../assets/checked.svg')['default']
 
+    const {t} = useTranslation()
+
     return (
-        <div style={{padding: '100px 0'}}>
+        <div style={{padding: '100px 0'}} id='roadmap'>
             <Container>
                 <Flex direction='column' align='center'>
-                    <BlockTitle margin='50px 0' color='#FFF'>Project Roadmap</BlockTitle>
+                    <BlockTitle margin='50px 0' color='#FFF'>
+                        {t("Home.RoadMap.title")}
+                    </BlockTitle>
                 </Flex>
             </Container>
             <Swiper
@@ -49,23 +56,23 @@ const RoadMap:React.FC = () => {
                             <Flex direction='column'>
                                 <Flex align='center'>
                                     <CheckedIconS src={CheckedIcon}/>
-                                    <MiniText>TraceChain development</MiniText>
+                                    <MiniText>{t("Home.RoadMap.Blocks.Block1.texts.text1")}</MiniText>
                                 </Flex>
                                 <Flex align='center' margin='5px 0'>
                                     <CheckedIconS src={CheckedIcon}/>
-                                    <MiniText>Public release of the project</MiniText>
+                                    <MiniText>{t("Home.RoadMap.Blocks.Block1.texts.text2")}</MiniText>
                                 </Flex>
                                 <Flex align='center' margin='5px 0'>
                                     <CheckedIconS src={CheckedIcon}/>
-                                    <MiniText>Registration in Switzerland</MiniText>
+                                    <MiniText>{t("Home.RoadMap.Blocks.Block1.texts.text3")}</MiniText>
                                 </Flex>
                                 <Flex align='center' margin='5px 0'>
                                     <CheckedIconS src={CheckedIcon}/>
-                                    <MiniText>Mainnet activation</MiniText>
+                                    <MiniText>{t("Home.RoadMap.Blocks.Block1.texts.text4")}</MiniText>
                                 </Flex>
                                 <Flex align='center' margin='5px 0'>
                                     <CheckedIconS src={CheckedIcon}/>
-                                    <MiniText>Forging tests</MiniText>
+                                    <MiniText>{t("Home.RoadMap.Blocks.Block1.texts.text5")}</MiniText>
                                 </Flex>
                             </Flex>
                         </RMItem>
@@ -77,15 +84,15 @@ const RoadMap:React.FC = () => {
                             <Flex direction='column'>
                                 <Flex align='center' margin='5px 0'>
                                     <CheckedIconS src={CheckedIcon}/>
-                                    <MiniText>Forging in Mainnet</MiniText>
+                                    <MiniText>{t("Home.RoadMap.Blocks.Block2.texts.text1")}</MiniText>
                                 </Flex>
                                 <Flex align='center' margin='5px 0'>
                                     <CheckedIconS src={CheckedIcon}/>
-                                    <MiniText>Peer node</MiniText>
+                                    <MiniText>{t("Home.RoadMap.Blocks.Block2.texts.text2")}</MiniText>
                                 </Flex>
                                 <Flex align='center' margin='5px 0'>
                                     <CheckedIconS src={CheckedIcon}/>
-                                    <MiniText>Infrastructure Torrent node</MiniText>
+                                    <MiniText>{t("Home.RoadMap.Blocks.Block2.texts.text3")}</MiniText>
                                 </Flex>
                             </Flex>
                         </RMItem>
@@ -97,15 +104,15 @@ const RoadMap:React.FC = () => {
                             <Flex direction='column'>
                                 <Flex align='center' margin='5px 0'>
                                     <CheckedIconS src={CheckedIcon}/>
-                                    <MiniText>Service Torrent node</MiniText>
+                                    <MiniText>{t("Home.RoadMap.Blocks.Block3.texts.text1")}</MiniText>
                                 </Flex>
                                 <Flex align='center' margin='5px 0'>
                                     <CheckedIconS src={CheckedIcon}/>
-                                    <MiniText>Verification node</MiniText>
+                                    <MiniText>{t("Home.RoadMap.Blocks.Block3.texts.text2")}</MiniText>
                                 </Flex>
                                 <Flex align='center' margin='5px 0'>
                                     <CheckedIconS src={CheckedIcon}/>
-                                    <MiniText>Update to browser</MiniText>
+                                    <MiniText>{t("Home.RoadMap.Blocks.Block3.texts.text3")}</MiniText>
                                 </Flex>
                             </Flex>
                         </RMItem>
