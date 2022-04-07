@@ -40,6 +40,7 @@ export const IFDItem = styled.li`
     }
     @media(max-width: 576px){
         border-right: none; 
+        border-bottom: solid 1px #FFEE2D; 
         padding: 20px 0;
     }
 `

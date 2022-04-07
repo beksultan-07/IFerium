@@ -13,8 +13,10 @@ const Bg = require("../../assets/home/bg.jpg")
 const HomeStyle = styled.div`
     background: url(${Bg}) 0 0 / cover;
     padding-top: 100px;
+    @media(max-width: 682px){
+        padding-top: 78px;
+    }
 `
-
 
 const Home:React.FC = () => {
     return (

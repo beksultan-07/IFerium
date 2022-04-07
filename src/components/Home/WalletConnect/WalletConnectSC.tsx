@@ -215,6 +215,7 @@ export const WCBtns = styled(Flex)`
 `
 
 export const WCBtn = styled(WCLBtn)`
+    margin: 20px 0 0;
     background: none;
     span{
         color: #F7F7F7;

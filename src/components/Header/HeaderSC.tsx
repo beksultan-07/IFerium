@@ -15,8 +15,8 @@ export const HeaderLogoWrap = styled(Link)`
     align-items: center;
     margin-right: auto;
     padding: 21px 0;
-    @media(max-width: 682px){
-        margin: 0 auto;
+    @media(max-width: 768px){
+        padding: 10px 0;
     }
 ` 
 
@@ -32,9 +32,8 @@ export const HeaderLogoText = styled.p`
     line-height: 32px;
     color: #FFFFFF;
     margin-left: 14px; 
-    @media(max-width: 682px){
-        display: none;
-        width: 0;
+    @media(max-width: 768px){
+        font-size: 26px;
     }
 ` 
 
@@ -42,7 +41,7 @@ export const HeaderLogoText = styled.p`
 export const HeaderLinks = styled.nav`
     display: flex;
     justify-content: space-between;
-    @media(max-width: 682px){
+    @media(max-width: 768px){
         display: none;
         width: 0;
 
@@ -76,13 +75,13 @@ export const LangDropDown = styled.img`
 export const Burger = styled.img`
     width: 30px;
     margin-left: 24px;
-    @media(min-width: 682px){
+    @media(min-width: 768px){
         display: none;
     }
 `
 
 export const RightMenu = styled(Flex)`
-    @media(max-width: 682px){
+    @media(max-width: 768px){
         display: none;
     }
 ` 
@@ -127,6 +126,8 @@ export const LDDIcon = styled.img`
     margin: 0;
 `
 
+// BM - Burger Menu
+
 type BurgerProps = {
     burgerClick: boolean;
 }
@@ -137,7 +138,7 @@ export const BMWrap = styled.div<BurgerProps>`
     width: 100vw;
     position: absolute;
     top: 0;
-    left: ${props => props.burgerClick?'0':'1000%'};
+    left: ${props => props.burgerClick?'0':'100%'};
     transition: .3s;
     padding: 20px;
 `
@@ -158,15 +159,25 @@ export const BMLink = styled.button`
 
 export const RightMenu1 = styled(RightMenu)`
     display: flex;
+    align-self: center;
 `
 
 export const BMSideBarWrap = styled(Flex)`
+    margin: 30px 0 0;
     display: flex;
-    flex-direction: column;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* flex-direction: column; */
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    gap: 10px;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(50px);
     border-radius: 20px;
-    padding: 12px 18px ;
+    padding: 12px 10px ;
     z-index: 2;
-    width: 70px;
+    a{
+        margin: 0;
+    }
 `

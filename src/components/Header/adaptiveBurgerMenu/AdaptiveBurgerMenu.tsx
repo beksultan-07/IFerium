@@ -42,11 +42,10 @@ const AdaptiveBurgerMenu:React.FC<Props> = (props) => {
     <BMWrap burgerClick={props.showBurgerMenu}>
         <Flex justify='space-between'>
             <HeaderLogo src={logo}/>
-
             <Burger src={BurgerIcon} style={{width: '50px'}} onClick={() => props.setBM(false)}/>
         </Flex>
 
-        <Flex align='center' justify='space-between' margin='100px 0'>
+        <Flex direction='column' align='center' justify='space-between' margin='50px 0'>
             <Flex direction='column' align='flex-start'>
                 <BMLink>Roadmap</BMLink>
                 <BMLink>Contact</BMLink>

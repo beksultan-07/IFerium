@@ -9,9 +9,11 @@ export const BannerInfo = styled(Flex)`
             font-size: 36px;
             line-height: 42px;
         }
-        img{
-            margin: 30px 0 0;
-            align-self: center;
+    }
+    @media(max-width: 400px){
+        h1{
+            font-size: 32px;
+            line-height: 36px;
         }
     }
 `
@@ -31,6 +33,9 @@ export const BannerBtn = styled.button`
     border-radius: 20px;
     align-items: center;
     justify-content: center;
+    @media(max-width: 760px){
+        align-self: center;
+    }
 
     span{
         font-family: 'Rany';
@@ -51,6 +56,10 @@ export const BannerLogo = styled.img`
     flex: .55;
     width: 100%;
     max-width: 385px;
+    @media(max-width: 760px){
+        align-self: center;
+        margin: 0 0 30px;
+    }
 `
 
 export const BannerRates = styled(Flex)`
@@ -114,7 +123,7 @@ export const BannerRatesItem2Texts = styled(Flex)`
 
 `
 export const BannerInfoSide = styled(Flex)`
-    /* @media(max-width: 760px){
-        max-width: 600px;
-    } */
-    `
+    @media(max-width: 760px){
+        order: 1;
+    }
+`

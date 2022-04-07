@@ -20,7 +20,6 @@ i18n
     })
 
 export const changeLang = (lang:string) => {
-    console.log(lang)
     i18n.changeLanguage(lang).then(r => r)
 }
 

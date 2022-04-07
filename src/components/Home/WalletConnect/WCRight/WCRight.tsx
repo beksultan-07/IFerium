@@ -24,37 +24,37 @@ const WCRight:React.FC = () => {
                 <WCItem>
                     <Flex justify='space-between'>
                         <MiniText>Total invited</MiniText>
-                        <MiniText color='#FFEE2D'>0 Users</MiniText>
+                        <MiniText color='#FFEE2D' margin='0 0 0 5px'>0 Users</MiniText>
                     </Flex>
                 </WCItem>
                 <WCItem>
                     <Flex justify='space-between'>
                         <MiniText>Airdorp tasks</MiniText>
-                        <MiniText color='#FFEE2D'>0 MetaUFO</MiniText>
+                        <MiniText color='#FFEE2D' margin='0 0 0 5px'>0 MetaUFO</MiniText>
                     </Flex>
                 </WCItem>
                 <WCItem>
                     <Flex justify='space-between'>
                         <MiniText>IDO Rate</MiniText>
-                        <MiniText color='#FFEE2D'>0.00004 BNB/1 MetaUFO</MiniText>
+                        <MiniText color='#FFEE2D' margin='0 0 0 5px'>0.00004 BNB/1 MetaUFO</MiniText>
                     </Flex>
                 </WCItem>
                 <WCItem>
                     <Flex justify='space-between'>
                         <MiniText>IDO Start</MiniText>
-                        <MiniText color='#FFEE2D'>Wednesday, Mar 30, 2022</MiniText>
+                        <MiniText color='#FFEE2D' margin='0 0 0 5px'>Wednesday, Mar 30, 2022</MiniText>
                     </Flex>
                 </WCItem>
                 <WCItem>
                     <Flex justify='space-between'>
                         <MiniText>IDO end</MiniText>
-                        <MiniText color='#FFEE2D'>Friday, April 29, 2022</MiniText>
+                        <MiniText color='#FFEE2D' margin='0 0 0 5px'>Friday, April 29, 2022</MiniText>
                     </Flex>
                 </WCItem>
                 <WCItem>
                     <Flex justify='space-between'>
                         <MiniText>Unlock date</MiniText>
-                        <MiniText color='#FFEE2D'>June 28, 2022</MiniText>
+                        <MiniText color='#FFEE2D' margin='0 0 0 5px'>June 28, 2022</MiniText>
                     </Flex>
                 </WCItem>
             </WCUl>
